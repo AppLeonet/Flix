@@ -76,4 +76,14 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Loading up the details screen")
+        
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.item]
+        
+        let detailsViewController = segue.destination as! SuperheroDetailsViewController
+        detailsViewController.movie = movie
+    }
 }

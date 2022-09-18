@@ -23,6 +23,7 @@
 		54C1146C28C8397800204733 /* TipsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1146B28C8397800204733 /* TipsterUITests.swift */; };
 		54C1146E28C8397800204733 /* TipsterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1146D28C8397800204733 /* TipsterUITestsLaunchTests.swift */; };
 		54C51F3428C95D8D00596AEA /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 54C51F3328C95D8D00596AEA /* AlamofireImage */; };
+		54ED1AE428D64D97001DD564 /* SuperheroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ED1AE328D64D97001DD564 /* SuperheroDetailsViewController.swift */; };
 		CFD9C436A0BA45A8B85ACEC3 /* Pods_Tipster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC2320FA22279CE91A26131 /* Pods_Tipster.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		54C1146728C8397800204733 /* TipsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C1146B28C8397800204733 /* TipsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsterUITests.swift; sourceTree = "<group>"; };
 		54C1146D28C8397800204733 /* TipsterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		54ED1AE328D64D97001DD564 /* SuperheroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroDetailsViewController.swift; sourceTree = "<group>"; };
 		940A49B408C7982EEFC574D4 /* Pods-TipsterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipsterTests.release.xcconfig"; path = "Target Support Files/Pods-TipsterTests/Pods-TipsterTests.release.xcconfig"; sourceTree = "<group>"; };
 		96868EF54006DA276BED1D60 /* Pods-Tipster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipster.debug.xcconfig"; path = "Target Support Files/Pods-Tipster/Pods-Tipster.debug.xcconfig"; sourceTree = "<group>"; };
 		9B1CC0B4575FA1E2DE47B584 /* Pods_TipsterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipsterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 				54A8B8F928D4F517009668C8 /* MovieDetailsViewController.swift */,
 				54A8B8FB28D52940009668C8 /* MovieGridViewController.swift */,
 				54A8B8FD28D53494009668C8 /* MovieGridCell.swift */,
+				54ED1AE328D64D97001DD564 /* SuperheroDetailsViewController.swift */,
 			);
 			path = Tipster;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54A8B8FA28D4F517009668C8 /* MovieDetailsViewController.swift in Sources */,
+				54ED1AE428D64D97001DD564 /* SuperheroDetailsViewController.swift in Sources */,
 				54C1144F28C8397400204733 /* MoviesViewController.swift in Sources */,
 				54C1144B28C8397400204733 /* AppDelegate.swift in Sources */,
 				543BCD7628C93C83008795E3 /* MovieCell.swift in Sources */,
