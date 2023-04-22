@@ -13,23 +13,28 @@ class MovieDetailsViewController: UIViewController {
     
     @IBOutlet weak var backDropView: UIImageView!
     
-    @IBOutlet weak var posterView: UIImageView!
+    @IBOutlet weak var posterView: UIImageView! {
+        didSet {
+            let imageTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+            posterView.addGestureRecognizer(imageTapGestureRecognizer)
+            posterView.isUserInteractionEnabled = true
+        }
+    }
     
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var synopsisLabel: UILabel!
-    
-    
-    
 
     var movie: [String: Any]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
        
-        
+        // Do any additional setup after loading the view.
+       
+               
+        posterView.isUserInteractionEnabled = true
+       
         titleLabel.text = movie["title"] as? String
         titleLabel.sizeToFit()
         synopsisLabel.text = movie["overview"] as? String
@@ -45,9 +50,24 @@ class MovieDetailsViewController: UIViewController {
         let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)
         
         backDropView.af_setImage(withURL: backdropUrl!)
+        
     }
     
-    
+    @objc func imageTapped() {
+        //navigate to another view controller
+        // Create an instance of the trailerViewController
+           
+           
+           // Set the movieId property of the trailerViewController
+           
+        let videotrailerVC = videoTrailerViewController()
+        videotrailerVC.movieId = movie["id"] as? Int
+            self.present(videotrailerVC, animated: true)
+           // Present the trailerViewController
+           
+       
+       
+    }
 
     /*
     // MARK: - Navigation

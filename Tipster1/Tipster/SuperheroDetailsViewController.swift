@@ -11,7 +11,14 @@ import AlamofireImage
 class SuperheroDetailsViewController: UIViewController {
 
     @IBOutlet weak var backdropView: UIImageView!
-    @IBOutlet weak var posterView: UIImageView!
+    @IBOutlet weak var posterView: UIImageView! {
+        didSet {
+            let imageTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+            posterView.addGestureRecognizer(imageTapGestureRecognizer)
+            posterView.isUserInteractionEnabled = true
+        }
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     
@@ -29,7 +36,7 @@ class SuperheroDetailsViewController: UIViewController {
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: baseUrl + posterPath)
-        
+        //let posterKey = movie["key"] as! String
         posterView.af_setImage(withURL: posterUrl!)
         
         let backdropPath = movie["backdrop_path"] as! String
@@ -39,6 +46,21 @@ class SuperheroDetailsViewController: UIViewController {
     }
     
 
+    @objc func imageTapped() {
+        //navigate to another view controller
+        // Create an instance of the trailerViewController
+           
+           
+           // Set the movieId property of the trailerViewController
+           
+        let superTrailerVC = SuperTrailerViewController()
+        superTrailerVC.movieId = movie["id"] as? Int
+            self.present(superTrailerVC, animated: true)
+           // Present the trailerViewController
+           
+       
+       
+    }
     /*
     // MARK: - Navigation
 
